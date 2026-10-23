@@ -11,11 +11,22 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-
-		<PackageReference Include="BepInEx.Core" Version="5.4.2122" />
+		<PackageReference Include="BepInEx.Core" Version="5.4.21" />
 		<PackageReference Include="UnityEngine.Modules" Version="2021.3.33" IncludeAssets="compile" />
 		<PackageReference Include="RiskOfRain2.GameLibs" Version="1.5.0-r.1" />
 		<PackageReference Include="MMHOOK.RoR2" Version="2025.5.5" NoWarn="NU1701" />
 	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="UnityHotReload">
+			<HintPath>..\lib\UnityHotReload.dll</HintPath>
+			<Private>false</Private>
+			<CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+		</Reference>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /E /Y &quot;$(TargetDir)&quot; &quot;C:\Users\robot\AppData\Roaming\r2modmanPlus-local\RiskOfRain2\profiles\Dev\BepInEx\plugins\&quot;" />
+	</Target>
 
 </Project>
