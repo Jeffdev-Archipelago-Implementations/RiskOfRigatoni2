@@ -1,0 +1,12 @@
+{
+	"name": "RiskOfRigatoni2",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/Jeffdev-Archipelago-Implementations/RiskOfRigatoni2",
+	"description": "An alternate take on Risk of Rain 2 Archipelago, by Jeffdev and Soopercool101, that aims to make it more random and substantial.",
+	"dependencies": [
+		"bbepis-BepInExPack-5.4.2122",
+		"RiskofThunder-HookGenPatcher-1.2.3",
+		"RiskofThunder-R2API_Core-5.1.5",
+		"RiskofThunder-R2API_ContentManagement-1.0.8"
+	]
+}
